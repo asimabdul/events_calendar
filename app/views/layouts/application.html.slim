@@ -1,7 +1,7 @@
 doctype strict
 html
   head
-    title Calenadar
+    title Calendar
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     - if CalendarApp::Application.assets.find_asset("#{controller_name}/#{action_name}")
