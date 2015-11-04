@@ -1,3 +1,7 @@
+
+
+# The html for the calendar is constructed server side combining logic with content_tags
+
 class CalendarGenerator
   include ActionView::Helpers::TagHelper
   include ActionView::Context
@@ -36,6 +40,7 @@ class CalendarGenerator
     end.join.html_safe
   end
 
+  #appropriate classes are attached to format the day cells
   def day_cell(cell_date)
     attach_class = (cell_date.month != @date.month ? "outlier-days" : "")
     cell_content = day_cell_content(cell_date)
@@ -67,6 +72,7 @@ class CalendarGenerator
     event_links.join.html_safe
   end
 
+  #more than 2 events for a given day is displayed as a single link
   def build_multiple_events_link(events)
     event_names = []
     event_invites = []
@@ -77,6 +83,7 @@ class CalendarGenerator
     content_tag(:p, link_to("#{events.size} events", "#", class: "more_events_link", "data-event-names" => event_names.join(","), "data-event-invites" => event_invites.join(","))).html_safe
   end
 
+  #gets the days for the month and splits them into groups of 7 for the weeks
   def weeks
     start_date = @date.beginning_of_month.beginning_of_week(:sunday)
     end_date = @date.end_of_month.end_of_week(:sunday)

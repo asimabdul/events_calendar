@@ -1,10 +1,13 @@
 class CalendarEvent
   
   def self.load_events(filename="events_data.json")
+    #event loading is memoized
     @events ||= self.parse_json(filename)
   end
 
   private
+
+  #events are grouped by date. Date is key and values are array of events
   def self.parse_json(filename)
     file_contents = File.read(filename)
     events = Oj.load(file_contents).fetch("events", [])
