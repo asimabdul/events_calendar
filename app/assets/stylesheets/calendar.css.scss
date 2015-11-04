@@ -1,0 +1,31 @@
+.calendar-view {
+  margin-top: 40px;
+}
+
+table.table thead tr th {
+  vertical-align: top;
+}
+
+.day-cells {
+  height: 75px;
+}
+
+.outlier-days {
+  color: #A2A0A0;
+}
+
+.calendar-navigator {
+  margin-bottom: 20px;
+
+  .date-display {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+}
+
+.panel-heading {
+  .event-title {
+    font-size: 16px;
+  }
+}

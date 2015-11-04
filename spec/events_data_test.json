@@ -1,0 +1,32 @@
+{
+"events": [
+  {
+    "occasion": "Birthday party",
+    "invited_count": 120,
+    "year": 2015,
+    "month": 03,
+    "day": 14
+  },
+  {
+    "occasion": "Brainstorm",
+    "invited_count": 120,
+    "year": 2015,
+    "month": 03,
+    "day": 14
+  },
+  {
+    "occasion": "Retrospective",
+    "invited_count": 120,
+    "year": 2015,
+    "month": 03,
+    "day": 14
+  },
+  {
+    "occasion": "Technical discussion",
+    "invited_count": 23,
+    "year": 2015,
+    "month": 4,
+    "day": 24
+  }
+]
+}

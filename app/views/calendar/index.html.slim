@@ -1,0 +1,12 @@
+
+h3 Calendar
+.calendar-view
+  div.calendar-navigator.text-center
+    = link_to calendar_index_url(date: @date - 1.month), class: "btn btn-default" do
+      i.glyphicon.glyphicon-chevron-left
+    span.date-display #{@date.strftime("%B")} #{@date.strftime("%Y")}
+    = link_to calendar_index_url(date: @date + 1.month), class: "btn btn-default" do
+      i.glyphicon.glyphicon-chevron-right
+
+  = @calendar
+    

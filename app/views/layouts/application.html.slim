@@ -1,0 +1,13 @@
+doctype strict
+html
+  head
+    title Calenadar
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    - if CalendarApp::Application.assets.find_asset("#{controller_name}/#{action_name}")
+      = javascript_include_tag "#{controller_name}/#{action_name}", "data-turbolinks-track" => true
+    = csrf_meta_tags
+
+  body
+    .container
+      == yield
